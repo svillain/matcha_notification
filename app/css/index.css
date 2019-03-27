@@ -1,0 +1,103 @@
+@import url("game.css");
+@import url("messages.css");
+@import url("notifications.css");
+@import url("settings.css");
+
+body, html {
+	background-color: #f5f7fa;
+	margin: 0;
+	padding: 0;
+	font-family: monospace,sans-serif;
+	overflow: hidden;
+}
+
+.side-menu {
+	z-index: 2;
+	background-color: #ffffff;
+	height: 100%;
+	width: 20%;
+	position: absolute;
+	min-width: 300px;
+	box-shadow: 0 1px 8px 0 rgba(0,17,25,.27);
+}
+
+.side-menu .head {
+	background: linear-gradient(262deg, #ff7854, #fd267d);
+	width: 100%;
+	height: 80px;
+	position: relative;
+	box-shadow: 0 1px 8px 0 rgba(0,17,25,.27);
+	cursor: pointer;
+}
+
+.side-menu>.head .pp {
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	position: relative;
+	top: 50%;
+	transform: translate(40%, -50%);
+	border: 1px solid #ffffff;
+	background-position: 50% 50%;
+	background-size: auto 100%;
+}
+
+.side-menu>.head span {
+	position: absolute;
+	top: 50%;
+	transform: translate(60%, -50%);
+	font-size: 1.8rem;
+	color: #ffffff;
+}
+
+.side-menu>.nav ul {
+	margin: 0;
+	padding: 15px 0px 0px 15px;
+}
+
+.side-menu>.nav li {
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 800;
+	color: #424242;
+	cursor: pointer;
+}
+
+.side-menu>.nav hr {
+	height: 0px;
+	width: 110%;
+	margin: 0px 0px 0px -4px;
+	visibility: hidden;
+	
+}
+
+.active {
+	border-bottom: 2px solid #fd267d;
+}
+
+.side-menu>.side-info span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-weight: 800;
+	transform: translate(-50%, -50%);
+	font-size: 1.6rem;
+	color: #424242;
+}
+
+.side-menu>.side-info>.settings span{
+	position: absolute;
+	top: 55%;
+	left: 33.5%;
+	font-weight: 800;
+	font-size: 1rem;
+	color: #fd267d;
+}
+
+.sp-hidden {
+	visibility: hidden;
+}
+
+.app-screen-active {
+	visibility: visible !important;
+}

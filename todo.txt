@@ -1,0 +1,26 @@
+a faire : 
+
+faire des restrictions sur le mdp : mini 1 chiffre -> changer le mdp par defaut pour le seeder
+pouvoir faire mot de passe oublier sur la page index dans log-in -> renvoyer un mail avec un nouveau mot de passe pour que la personne se co et le change ensuite dans settings
+il faut un historique de tout donc les notifications ne doivent pas s'effacer et toujours s'afficher dans l'onglet notif -> faire apparaitre les nouvelles notifs mieux que les anciennes et faire un bouton pour marquer c'est nouvelle notifs en seen -> creer une class par rapport a seen=0 ou seen=1 
+l'utilisateur ne doit pas voir la partie suggestion a moins d'avoir au minimum rempli : username, nom, prenom, email, age, photo_1, localisation, 
+le score
+localisation de la personne a l'arrondissement pres meme si elle ne le veut pas 
+tous les matchs doivent correspondre au moins a l'attraction qui est par defaut bisexuel -> pas de match avec une femme si le gars est homo tu lui conseille que des hommes homo dans tous les cas meme si il y a pas de filtres
+afficher dans suggestion les profils tries par ordre de score (qui lui est fait en fonction de la geolocalisation, les tags et le score de popularite)
+afficher un profil en cliquant sur la carte de la personne : on peut tout voir sauf son adresse mail et son password. Il doit y avoir son score de popularite ainsi que la date de sa derniere connexion (ou a defaut si il est connecte qu'il l'est ou alors qu'il ne l'a jamais ete)
+on doit pouvoir liker et deliker un compte 
+si les deux personnes ce sont like alors elles doivent pouvoir s'envoyer un message
+si la personne n'a pas rempli
+la card et/ou le profil doit afficher si les deux utilisateurs se likent ou si l'autre like le premier
+sur le profil de qqun on doit pouvoir en plus de liker et envoyer un message si les deux se likent mutuellement : pouvoir signaler un compte comme faux et pouvoir bloquer la personne > un utilisateur bloque ne doit plus apparaitre dans les suggestions et ne doit plus pouvoir envoyer de notifs ni de message a la personne
+message > en temps reel ! moins de 10s pour s'afficher chez l'autre utilisateur 
+voir depuis n'importe quelle page qu'on a un nouveau message ou une notification > notification = une personne qui like son profil; qqun qui a visite son profil (donc clique sur la card pour afficher le profil); un utilisateur qu'il avait deja like l'a like en retour->match, une personne qui le like avant ne le like plus 
+
+
+
+a check :
+IL NE FAUT AUCUN WARING, ERREUR CONSOLE OU NOTICE 
+pas d'injection sql possible dans les formulaires
+compatibilite : chrome >=46 et firefox >=41
+site dispo sur petite resolution 
