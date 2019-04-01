@@ -5,7 +5,7 @@ include("../config/database.php");
 session_start();
 
 if (count($_POST) === 2 && isset($_POST['username'], $_POST['password'])) {
-	$db			 = new PDO($DB_DNS, $DB_USER, $DB_PASSWORD);
+	$db			 	= new PDO($DB_DNS, $DB_USER, $DB_PASSWORD);
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$db->query("USE matcha;");
 	$DB_Username	= $db->quote($_POST['username']);

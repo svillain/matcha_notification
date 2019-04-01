@@ -5,6 +5,8 @@ sign_btn.onclick = function() {
 	document.getElementById("signup-modal").style.opacity = 1;
 	document.getElementById("login-modal").style.visibility = "hidden";
 	document.getElementById("login-modal").style.opacity = 0;
+	document.getElementById("password-modal").style.visibility = "hiden";
+	document.getElementById("password-modal").style.opacity = 0;
 };
 
 
@@ -21,7 +23,7 @@ signUserInput.onkeyup = function() {
 	if (this.value != "") {
 		document.getElementById("signUsernameLabel").innerText = "";
 	} else {
-		document.getElementById("signUsernameLabel").innerText = "Username"
+		document.getElementById("signUsernameLabel").innerText = "Username";
 	}
 };
 
@@ -30,7 +32,7 @@ signPassInput.onkeyup = function() {
 	if (this.value != "") {
 		document.getElementById("signPasswordLabel").innerText = "";
 	} else {
-		document.getElementById("signPasswordLabel").innerText = "Password"
+		document.getElementById("signPasswordLabel").innerText = "Password";
 	}
 };
 
@@ -39,7 +41,7 @@ signMailInput.onkeyup = function() {
 	if (this.value != "") {
 		document.getElementById("signEmailLabel").innerText = "";
 	} else {
-		document.getElementById("signEmailLabel").innerText = "E-Mail"
+		document.getElementById("signEmailLabel").innerText = "E-Mail";
 	}
 };
 
@@ -48,7 +50,7 @@ signAgeInput.onkeyup = function() {
 	if (this.value != "") {
 		document.getElementById("signAgeLabel").innerText = "";
 	} else {
-		document.getElementById("signAgeLabel").innerText = "Age"
+		document.getElementById("signAgeLabel").innerText = "Age";
 	}
 };
 
@@ -57,7 +59,7 @@ signNameInput.onkeyup = function() {
 	if (this.value != "") {
 		document.getElementById("signNameLabel").innerText = "";
 	} else {
-		document.getElementById("signNameLabel").innerText = "Name"
+		document.getElementById("signNameLabel").innerText = "Name";
 	}
 };
 
@@ -66,7 +68,7 @@ signSurnameInput.onkeyup = function() {
 	if (this.value != "") {
 		document.getElementById("signSurnameLabel").innerText = "";
 	} else {
-		document.getElementById("signSurnameLabel").innerText = "Surname"
+		document.getElementById("signSurnameLabel").innerText = "Surname";
 	}
 };
 
@@ -166,8 +168,6 @@ function register() {
 	var age = document.getElementById("signAgeInput");
 	var name = document.getElementById("signNameInput");
 	var surname = document.getElementById("signSurnameInput");
-
-
 	var toast_error = document.getElementById("toast_error");
 	var toast_ok = document.getElementById("toast_ok");
 

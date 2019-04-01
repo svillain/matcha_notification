@@ -15,7 +15,6 @@ if ($_COOKIE["lang"] == "French") {
 require "assets/langs.php";
 
 ?>
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -24,6 +23,7 @@ require "assets/langs.php";
 	<link rel="stylesheet" href="css/navbar.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/modals/login.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/modals/signup.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/modals/password.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!-- NAVBAR -->
@@ -43,6 +43,7 @@ require "assets/langs.php";
 	<div class="index-container">
 		<h2 class="title"><?php lang($index["title"]); ?></h2>
 		<a id="signbtn" class="button"><?php lang($nav["signup"]); ?></a>
+		<a id="passwordbtn" class="button" style="margin-left: 20%"><?php lang($nav["password"]); ?></a>
 	</div>
 	<!-- CENTER END -->
 
@@ -65,6 +66,22 @@ require "assets/langs.php";
 		</form>
 	</div>
 	<!-- LOG IN END -->
+
+	<!-- Password -->
+	<div class="password-modal" id="password-modal">
+		<h1><?php lang($modPassword["title"]); ?></h1>
+		<h1 id="password-close" class="close">X<h1>
+		<h2><?php lang($modPassword["sub"]); ?></h2>
+		<form>
+			<div class="group">
+				<input id="PasswordInput" type="text" required></span>
+				<label id="PasswordInputLabel"><?php lang($modPassword["label1"]); ?></label>
+			</div>
+		<button id="passwordSubmit" type="button" class="button"><?php lang($modPassword["submit"]); ?></button>
+		<span id="PasswordOutput"></span>
+		</form>
+	</div>
+	<!-- Password END -->
 
 	<!-- SIGN UP -->
 	<div class="signup-modal" id="signup-modal">
@@ -103,5 +120,6 @@ require "assets/langs.php";
 	<!-- SIGN UP END -->
 </body>
 <script type="text/javascript" src="scripts/login.js"></script>
+<script type="text/javascript" src="scripts/password.js"></script>
 <script type="text/javascript" src="scripts/signup.js"></script>
 </html>

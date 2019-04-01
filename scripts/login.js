@@ -5,6 +5,8 @@ log_btn.onclick = function() {
 	document.getElementById("login-modal").style.opacity = 1;
 	document.getElementById("signup-modal").style.visibility = "hidden";
 	document.getElementById("signup-modal").style.opacity = 0;
+	document.getElementById("password-modal").style.visibility = "hiden";
+	document.getElementById("password-modal").style.opacity = 0;
 };
 
 
@@ -22,7 +24,7 @@ logUserInput.onkeyup = function() {
 		document.getElementById("logUsernameLabel").innerText = "";
 	}
 	else {
-		document.getElementById("logUsernameLabel").innerText = "Username"
+		document.getElementById("logUsernameLabel").innerText = "Username";
 	}
 };
 
@@ -32,7 +34,7 @@ logPassInput.onkeyup = function() {
 		document.getElementById("logPasswordLabel").innerText = "";
 	}
 	else {
-		document.getElementById("logPasswordLabel").innerText = "Password"
+		document.getElementById("logPasswordLabel").innerText = "Password";
 	}
 };
 
