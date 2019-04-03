@@ -2,6 +2,7 @@
 @import url("messages.css");
 @import url("notifications.css");
 @import url("settings.css");
+@import url("profile.css");
 
 body, html {
 	background-color: #f5f7fa;
@@ -100,4 +101,8 @@ body, html {
 
 .app-screen-active {
 	visibility: visible !important;
+}
+
+.app-screen-active_modal {
+	visibility: hidden !important;
 }

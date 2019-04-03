@@ -197,8 +197,54 @@ echo $distance;
 		<input class="button_logout" type="button" onclick="location.href='http://localhost:8080/assets/logout.php';" value="LogOut" />
 	</div>
 
-	<!-- GAME -->
-	<div class="game app-screen-active">
+	<!-- MATCH -->
+	<!--<div class="game app-screen-active" id="for_profile">-->
+		<!-- <h1 id="password-close" class="close_invisible">X<h1>-->
+
+	<h1 id="password-close" class="close_invisible">X<h1>
+			<!-- SIGN UP -->
+	<div class="signup-modal" id="signup-modal">
+		<h1>Profil de Username</h1>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Nom : Test</label>
+			</div>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Prenom : Crabi</label>
+			</div>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Age : 19 ans</label>
+			</div>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Localisation : Nice</label>
+			</div>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Gender : Woman</label>
+			</div>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Attraction : Men</label>
+			</div>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Bio : BLABKABKABKABKABKABKAB</label>
+			</div>
+			</br>
+			<div class="group">
+				<label id="signUsernameLabel">Interest : vauy,hfabifa,fahufa</label>
+			</div>
+			</br>
+			<button id="fake_account" type="button" class="button">Signaler comme faux compte</button>
+			</br></br>
+			<button id="blocked" type="button" class="button">Bloquer ce compte</button>	
+	</div>
+	<!-- SIGN UP END -->
+	<div class="game app-screen-active" id="for_profile">
+
 		<?php
 			buildMatchs($dbBuild);
 		?>
@@ -207,7 +253,7 @@ echo $distance;
 			<div id="btn-like" class="btn-like"></div>
 		</div>
 	</div>
-	<!-- END GAME -->
+	<!-- END MATCH -->
 
 	<!-- MESSAGES -->
 	<div class="messages">
@@ -304,6 +350,46 @@ echo $distance;
           map.fitBounds(bounds);
         });
       }
+
+	document.getElementById("game-card").onclick = function(){
+    	console.log("patate");
+
+    	//document.getElementById("app-screen-active").style.visibility = "hidden";
+		//document.getElementById("app-screen-active").style.opacity = 0;
+		//document.getElementById("game").style.visibility = "hidden";
+		//document.getElementById("game").style.opacity = 0;
+		//document.getElementById("signup-modal").style.visibility = "visible";
+		//document.getElementById("signup-modal").style.opacity = 1;
+    	/* Open Modal */
+    	//var divTest = document.getElementById("for_profile");
+		//divTest.className = "app-screen-active_modal";
+		document.getElementById("for_profile").style.visibility = "hidden";
+		document.getElementById("for_profile").style.opacity = 0;
+		document.getElementById("signup-modal").style.visibility = "visible";
+		document.getElementById("signup-modal").style.opacity = 1;
+		//aff_profile();
+	};
+
+	//profile_close = document.getElementById("signSubmit");
+	//profile_close.onclick = function() {
+	//document.getElementById("signSubmit").onclick = function(){
+	//	console.log("crabi");
+	//	document.getElementById("signup-modal").style.visibility = "hidden";
+	//	document.getElementById("signup-modal").style.opacity = 0;
+		//document.getElementById("for_profile").style.visibility = "visible";
+		//document.getElementById("for_profile").style.opacity = 1;
+	//};
+	sign_close = document.getElementById("password-close");
+	sign_close.onclick = function() {
+		console.log("crabi");
+		document.getElementById("signup-modal").style.visibility = "hidden";
+		document.getElementById("signup-modal").style.opacity = 0;
+	};
+
+	//function aff_profile() {
+	//	console.log("crabiii");
+	//}
+
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCLFXc1koLt0x0gaF4AytsICwnuXbJ2M&libraries=places&callback=initAutocomplete"

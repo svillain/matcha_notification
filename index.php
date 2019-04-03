@@ -118,6 +118,7 @@ require "assets/langs.php";
 		</form>
 	</div>
 	<!-- SIGN UP END -->
+	
 </body>
 <script type="text/javascript" src="scripts/login.js"></script>
 <script type="text/javascript" src="scripts/password.js"></script>

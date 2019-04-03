@@ -29,8 +29,5 @@ if (count($_POST) === 1 && isset($_POST['email'])) {
 		else
 			$ERROR = "NoEmail";
 	}
-	else {
-		$ERROR = "NoEmail";
-	}
 	echo $ERROR;
 }
