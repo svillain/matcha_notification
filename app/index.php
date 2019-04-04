@@ -361,8 +361,8 @@ echo $distance;
 		//document.getElementById("signup-modal").style.visibility = "visible";
 		//document.getElementById("signup-modal").style.opacity = 1;
     	/* Open Modal */
-    	//var divTest = document.getElementById("for_profile");
-		//divTest.className = "app-screen-active_modal";
+    	var divTest = document.getElementById("password-close");
+		divTest.className = "close";
 		document.getElementById("for_profile").style.visibility = "hidden";
 		document.getElementById("for_profile").style.opacity = 0;
 		document.getElementById("signup-modal").style.visibility = "visible";

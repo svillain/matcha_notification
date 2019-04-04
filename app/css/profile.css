@@ -6,9 +6,9 @@
 	top: 30px;
 	right: 30px;
 	cursor: pointer;
-	visibility: visible;
+	visibility: hidden;
 }
-/*
+
 .close {
 	padding-bottom: 0;
 	position: absolute;
@@ -16,7 +16,7 @@
 	right: 30px;
 	cursor: pointer;
 	visibility: visible;
-}*/
+}
 
 /* modal */
 
