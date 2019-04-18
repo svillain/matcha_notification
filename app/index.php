@@ -66,7 +66,7 @@ function getDistance($addressFrom, $addressTo, $unit = ''){
 
 
 $addressFrom = '77 rue de Rome 75017 Paris';
-$addressTo   = 'VILLA JACOB Fondation Casip-cojasor, 32 Avenue Général Estienne, 06000 Nice';
+$addressTo   = '06000 Nice';
 
 // Get distance in km
 $distance = getDistance($addressFrom, $addressTo, "K");
@@ -198,7 +198,7 @@ echo $distance;
 	</div>
 
 	<!-- MATCH -->
-	<!--<div class="game app-screen-active" id="for_profile">-->
+	<div class="game app-screen-active" id="for_profile">
 		<!-- <h1 id="password-close" class="close_invisible">X<h1>-->
 
 	<h1 id="password-close" class="close_invisible">X<h1>
@@ -353,13 +353,6 @@ echo $distance;
 
 	document.getElementById("game-card").onclick = function(){
     	console.log("patate");
-
-    	//document.getElementById("app-screen-active").style.visibility = "hidden";
-		//document.getElementById("app-screen-active").style.opacity = 0;
-		//document.getElementById("game").style.visibility = "hidden";
-		//document.getElementById("game").style.opacity = 0;
-		//document.getElementById("signup-modal").style.visibility = "visible";
-		//document.getElementById("signup-modal").style.opacity = 1;
     	/* Open Modal */
     	var divTest = document.getElementById("password-close");
 		divTest.className = "close";
@@ -367,18 +360,33 @@ echo $distance;
 		document.getElementById("for_profile").style.opacity = 0;
 		document.getElementById("signup-modal").style.visibility = "visible";
 		document.getElementById("signup-modal").style.opacity = 1;
+		target = $("#game-card:first").children().text();
+		target = target.substring(0, target.indexOf(","));
+		console.log(target);
+
+		var xhr_target = new XMLHttpRequest();
+		xhr_target.open("POST", "assets/fichier.php");
+		targetCtx = new FormData();
+		targetCtx.append("target", target);
+		console.log(targetCtx);
+		xhr_target.send(targetCtx);
+		xhr_target.onreadystatechange = function() {
+			if (this.readyState === 4) {
+				if (this.status === 200) {
+					var output = xhr_target.responseText;
+					if (output === "success") {
+						console.log("success");
+					}
+					else if (output === "no") {
+						console.log("no");
+					}
+				}
+			}
+		};
+
 		//aff_profile();
 	};
 
-	//profile_close = document.getElementById("signSubmit");
-	//profile_close.onclick = function() {
-	//document.getElementById("signSubmit").onclick = function(){
-	//	console.log("crabi");
-	//	document.getElementById("signup-modal").style.visibility = "hidden";
-	//	document.getElementById("signup-modal").style.opacity = 0;
-		//document.getElementById("for_profile").style.visibility = "visible";
-		//document.getElementById("for_profile").style.opacity = 1;
-	//};
 	sign_close = document.getElementById("password-close");
 	sign_close.onclick = function() {
 		console.log("crabi");
@@ -389,7 +397,6 @@ echo $distance;
 	//function aff_profile() {
 	//	console.log("crabiii");
 	//}
-
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPCLFXc1koLt0x0gaF4AytsICwnuXbJ2M&libraries=places&callback=initAutocomplete"
