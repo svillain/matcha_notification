@@ -1,21 +1,10 @@
-
-
 .close_invisible {
 	padding-bottom: 0;
 	position: absolute;
 	top: 30px;
 	right: 30px;
 	cursor: pointer;
-	visibility: hidden;
-}
-
-.close {
-	padding-bottom: 0;
-	position: absolute;
-	top: 30px;
-	right: 30px;
-	cursor: pointer;
-	visibility: visible;
+	display: none;
 }
 
 /* modal */
@@ -35,7 +24,7 @@
 	border-radius: 5px;
 	padding: 30px;
 	box-sizing:border-box;
-	visibility: hidden;
+	display: none;
 	opacity: 0;
 	transition: visibility 0s, opacity 0.5s linear;
 }

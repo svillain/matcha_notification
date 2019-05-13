@@ -198,11 +198,11 @@ echo $distance;
 	</div>
 
 	<!-- MATCH -->
-	<div class="game app-screen-active" id="for_profile">
-		<!-- <h1 id="password-close" class="close_invisible">X<h1>-->
+	<div class="game app-screen-active" id="for_profile_1">
+		 <h1 id="password-close" class="close_invisible">X<h1>
 
-	<h1 id="password-close" class="close_invisible">X<h1>
-			<!-- SIGN UP -->
+	
+	<!-- SIGN UP -->
 	<div class="signup-modal" id="signup-modal">
 		<h1>Profil de Username</h1>
 			</br>
@@ -355,11 +355,12 @@ echo $distance;
     	console.log("patate");
     	/* Open Modal */
     	var divTest = document.getElementById("password-close");
-		divTest.className = "close";
-		document.getElementById("for_profile").style.visibility = "hidden";
+		document.getElementById("password-close").style.display = "block";
+		document.getElementById("for_profile").style.display = "none";
 		document.getElementById("for_profile").style.opacity = 0;
-		document.getElementById("signup-modal").style.visibility = "visible";
+		document.getElementById("signup-modal").style.display = "block";
 		document.getElementById("signup-modal").style.opacity = 1;
+		document.getElementById("password-close").style.zIndex = "1";
 		target = $("#game-card:first").children().text();
 		target = target.substring(0, target.indexOf(","));
 		console.log(target);
@@ -390,8 +391,12 @@ echo $distance;
 	sign_close = document.getElementById("password-close");
 	sign_close.onclick = function() {
 		console.log("crabi");
-		document.getElementById("signup-modal").style.visibility = "hidden";
+		document.getElementById("signup-modal").style.display = "none";
 		document.getElementById("signup-modal").style.opacity = 0;
+		document.getElementById("for_profile").style.display = "block";
+		document.getElementById("for_profile").style.opacity = 1;
+		document.getElementById("password-close").style.display = "none";
+
 	};
 
 	//function aff_profile() {
