@@ -1,5 +1,1 @@
-mot de passe oublié sur la page index dans log-in -> entre une adresse mail valide -> erreur : POST http://localhost:8080/assets/password.php 500 (Internal Server Error)
-
 quand connecté on peut cliquer sur la carte du match pour afficher son profil -> comment faire pour recuperer le username qui apparait sur la carte de match pour pouvoir faire les requetes sql ?
-
-toujours sur la carte du profil, tu vas voir si tu passe ta souris le milieu est cliquable car il trouve toujours la carte du match en dessous et du coup ca reste cliquable mais la croix en haut a droite qui est cense te refaire passer sur la partie match ne fonctionne pas

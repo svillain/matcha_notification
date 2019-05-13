@@ -9,16 +9,15 @@ if (count($_POST) === 1 && isset($_POST['email'])) {
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$db->query("USE matcha;");
 	$DB_Email		= $db->quote($_POST['email']);
-//	$DB_Password	= $db->quote(hash('whirlpool', $_POST['password']));
 
 	$select = $db->query("SELECT * FROM users WHERE email=$DB_Email");
 	if ($select->rowCount() == 0) {
-		$ERROR = $select[0]['email'];
+		$ERROR = $t[0]['email'];
 	}
 
 	if (!isset($ERROR)) {
 		$select = $select->fetchAll();
-		if ($select[0]['email'] == $_POST['email'])) {
+		if ($select[0]['email'] == $_POST['email']) {
 			if ($select[0]['activated'] == 0)
 				$ERROR = "activation";
 			else {

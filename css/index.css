@@ -39,3 +39,13 @@ body, html{
     position: absolute;
     text-transform: uppercase;
 }
+
+.fr {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: red;
+	width: 500px;
+	height: 100px;
+	z-index: 1000;
+}

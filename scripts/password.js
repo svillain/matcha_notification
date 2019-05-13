@@ -17,8 +17,8 @@ password_close.onclick = function() {
 };
 
 /* Remove Label */
-var PasswordInput = document.getElementById("PasswordInput");
-PasswordInput.onkeyup = function() {
+var PassInput = document.getElementById("PasswordInput");
+PassInput.onkeyup = function() {
 	if (this.value != "") {
 		document.getElementById("PasswordInputLabel").innerText = "";
 	} else {
@@ -28,17 +28,22 @@ PasswordInput.onkeyup = function() {
 
 pass_submit = document.getElementById("passwordSubmit");
 pass_submit.onclick = function() {
-	change_password();
+	change_password(PassInput);
 };
 
-function change_password() {
-	var email = document.getElementById("PasswordInput");
+function change_password(PassInput) {
+	var email = PassInput;
 	var xhttp = new XMLHttpRequest();
 	xhttp.open("POST", "assets/password.php", true);
-	passData = new FormData();
+	var passData = new FormData();
+	console.log(email.value);
 	passData.append("email", email.value);
-	console.log(passData);
+	for (var key of passData.entries()) {
+        console.log(key[0] + ', ' + key[1]);
+    }
 	xhttp.send(passData);
+
+
 
 	xhttp.onreadystatechange = function() {
 		if (this.readyState === 4) {
