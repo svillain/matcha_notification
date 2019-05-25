@@ -5,6 +5,7 @@
 	right: 30px;
 	cursor: pointer;
 	display: none;
+	z-index: 10000;
 }
 
 /* modal */
@@ -20,7 +21,7 @@
 	right: 0;
 	left: 0;
 	margin: auto;
-	margin-left: 38%;
+	
 	border-radius: 5px;
 	padding: 30px;
 	box-sizing:border-box;

@@ -102,11 +102,92 @@ function buildMatchs($db) {
 					echo '<div id="game-card" class="view" style="background-image: url(' . $value["path_photo1"] . ')">' .
 					'<span class="name">' . $value["username"] . ', '. $value["age"] . '</span>
 					</div>';
+
+					echo '<div class="signup-modal" id="signup-modal">
+					<h1>Profil de '. $value["username"] . '</h1>
+					</br>
+					<div class="group">
+					<label id="signUsernameLabel">Nom : '. $value["name"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Prenom : '. $value["surname"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Age : '. $value["age"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Localisation : '. $value["localisation"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Gender : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Attraction : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Bio : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Interest : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<button id="fake_account" type="button" class="button">Signaler comme faux compte</button>
+					</br></br>
+					<button id="blocked" type="button" class="button">Bloquer ce compte</button>	
+					</div>';
+
 					$first = 1;
 				}
 				else {
 					echo '<div id="game-card" class="view" style="display: none; background-image: url(' . $value["path_photo1"] . ')">' .
 					'<span class="name">' . $value["username"] . ', '. $value["age"] . '</span>
+					</div>';
+
+					echo '<div class="signup-modal" id="signup-modal">
+					<h1>Profil de '. $value["username"] . '</h1>
+					</br>
+					<div class="group">
+					<label id="signUsernameLabel">Nom : '. $value["name"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Prenom : '. $value["surname"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Age : '. $value["age"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Localisation : '. $value["localisation"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Gender : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Attraction : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Bio : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<div class="group">
+						<label id="signUsernameLabel">Interest : '. $value["username"] . '</label>
+					</div>
+					</br>
+					<button id="fake_account" type="button" class="button">Signaler comme faux compte</button>
+					</br></br>
+					<button id="blocked" type="button" class="button">Bloquer ce compte</button>	
 					</div>';
 				}
 			}

@@ -4,6 +4,7 @@ session_start();
 
 include("assets/userSettings.php");
 include("assets/builders.php");
+include 'ChromePhp.php';
 
 if (!isset($_SESSION["logged"])) {
 	header('Location: ../');
@@ -201,54 +202,12 @@ echo $distance;
 	<div class="game app-screen-active" id="for_profile_1">
 		 <h1 id="password-close" class="close_invisible">X<h1>
 
-	
-	<!-- SIGN UP -->
-	<div class="signup-modal" id="signup-modal">
-		<h1>Profil de Username</h1>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Nom : Test</label>
-			</div>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Prenom : Crabi</label>
-			</div>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Age : 19 ans</label>
-			</div>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Localisation : Nice</label>
-			</div>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Gender : Woman</label>
-			</div>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Attraction : Men</label>
-			</div>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Bio : BLABKABKABKABKABKABKAB</label>
-			</div>
-			</br>
-			<div class="group">
-				<label id="signUsernameLabel">Interest : vauy,hfabifa,fahufa</label>
-			</div>
-			</br>
-			<button id="fake_account" type="button" class="button">Signaler comme faux compte</button>
-			</br></br>
-			<button id="blocked" type="button" class="button">Bloquer ce compte</button>	
-	</div>
-	<!-- SIGN UP END -->
 	<div class="game app-screen-active" id="for_profile">
 
 		<?php
 			buildMatchs($dbBuild);
 		?>
-		<div class="controls">
+		<div class="controls" id="controls-button">
 			<div id="btn-dislike" class="btn-dislike"></div>
 			<div id="btn-like" class="btn-like"></div>
 		</div>
@@ -356,34 +315,49 @@ echo $distance;
     	/* Open Modal */
     	var divTest = document.getElementById("password-close");
 		document.getElementById("password-close").style.display = "block";
-		document.getElementById("for_profile").style.display = "none";
-		document.getElementById("for_profile").style.opacity = 0;
+		document.getElementById("game-card").style.display = "none";
+		document.getElementById("game-card").style.opacity = 0;
+		document.getElementById("controls-button").style.display = "none";
+		document.getElementById("game-card").style.opacity = 0;
 		document.getElementById("signup-modal").style.display = "block";
 		document.getElementById("signup-modal").style.opacity = 1;
-		document.getElementById("password-close").style.zIndex = "1";
+		document.getElementById("password-close").style.zIndex = "10000";
 		target = $("#game-card:first").children().text();
 		target = target.substring(0, target.indexOf(","));
+		<?php echo $target ?>
+		//var xhr = new XMLHttpRequest();
+		//xhr.open("POST", "index.php", true);
+		//xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		//xhr.send("target=" + target);
 		console.log(target);
 
-		var xhr_target = new XMLHttpRequest();
-		xhr_target.open("POST", "assets/fichier.php");
-		targetCtx = new FormData();
-		targetCtx.append("target", target);
-		console.log(targetCtx);
-		xhr_target.send(targetCtx);
-		xhr_target.onreadystatechange = function() {
-			if (this.readyState === 4) {
-				if (this.status === 200) {
-					var output = xhr_target.responseText;
-					if (output === "success") {
-						console.log("success");
-					}
-					else if (output === "no") {
-						console.log("no");
-					}
-				}
-			}
-		};
+		//var xhr_target = new XMLHttpRequest();
+		//xhr_target.open("POST", "assets/fichier.php");
+		//targetCtx = new FormData();
+		//targetCtx.append("target", target);
+		//xhr_target.send(targetCtx);
+		//xhr_target.onreadystatechange = function() {
+			//if (this.readyState === 4) {
+				//if (this.status === 200) {
+					//var output = xhr_target.responseText;
+					//var obj = json.stringify(output);
+
+					//var pouet = "< ? php echo $var ?>";
+					//console.log(pouet);
+					//var obj = JSON.parse(JSON.stringify(pouet));
+					//if (obj !== null && obj !== '""') {
+						//console.log("success");
+						//console.log(typeof(obj));
+						//console.log("-----------------");
+						//console.log(obj.name);
+						//console.log("-----------------");
+					//}
+					//else if (obj === null || obj === '""') {
+						//console.log("no");
+					//}
+				//}
+			//}
+		//};
 
 		//aff_profile();
 	};
@@ -393,9 +367,10 @@ echo $distance;
 		console.log("crabi");
 		document.getElementById("signup-modal").style.display = "none";
 		document.getElementById("signup-modal").style.opacity = 0;
-		document.getElementById("for_profile").style.display = "block";
-		document.getElementById("for_profile").style.opacity = 1;
+		document.getElementById("game-card").style.display = "block";
+		document.getElementById("game-card").style.opacity = 1;
 		document.getElementById("password-close").style.display = "none";
+		document.getElementById("controls-button").style.display = "block";
 
 	};
 

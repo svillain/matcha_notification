@@ -37,7 +37,6 @@
 	top: 50%;
 	transform: translate(-50%, -340%);
 	border-radius: 2%;
-	cursor: pointer;
 	padding-top: 16px;
 	padding-bottom: 16px;
 }

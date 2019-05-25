@@ -53,6 +53,10 @@ function dislikeAnimation() {
 			$(this).css({ transform: 'rotate(-' + now + 'deg) translate(-50%, -50%)' });
 		}
 	});
+	$('#signup-modal').fadeOut(function() {
+		$(this).remove();
+		$('#signup-modal:first').fadeIn("slow");
+	});
 	$('#game-card').fadeOut(function() {
 		$(this).remove();
 		$('#game-card:first').fadeIn("slow");

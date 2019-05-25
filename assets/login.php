@@ -4,6 +4,8 @@ include("../config/database.php");
 
 session_start();
 
+$a = "lol";
+var_dump($a);
 if (count($_POST) === 2 && isset($_POST['username'], $_POST['password'])) {
 	$db			 	= new PDO($DB_DNS, $DB_USER, $DB_PASSWORD);
 	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
