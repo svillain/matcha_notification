@@ -1,1 +1,3 @@
-quand connecté on peut cliquer sur la carte du match pour afficher son profil -> comment faire pour recuperer le username qui apparait sur la carte de match pour pouvoir faire les requetes sql ?
+le premier profile s'affiche au onclick mais pas les suivants pourtant les cards existent
+
+Pour le mdp oublie, lien avec le hash dans le mail mais du coup il faut recup le hash de l'url et demander le pseudo : confirmation pseudo/hash et du coup changer le mdp

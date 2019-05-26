@@ -43,8 +43,6 @@ function change_password(PassInput) {
     }
 	xhttp.send(passData);
 
-
-
 	xhttp.onreadystatechange = function() {
 		if (this.readyState === 4) {
 			if (this.status === 200) {
