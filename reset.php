@@ -23,6 +23,7 @@ require "assets/langs.php";
 	<link rel="stylesheet" href="css/navbar.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/modals/login.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/modals/reset.css" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2016/02/04/11/57/heart-1179054_960_720.png">
 </head>
 <body>
 <!-- NAVBAR -->
