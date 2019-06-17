@@ -61,5 +61,5 @@ require "assets/langs.php";
 	</div>
 	<!-- LOG IN END -->
 </body>
-<script type="text/javascript" src="scripts/login.js"></script>
+<script type="text/javascript" src="scripts/login_verify.js"></script>
 </html>
