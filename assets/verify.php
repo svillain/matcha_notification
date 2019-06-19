@@ -2,7 +2,7 @@
 
 include("config/database.php");
 
-if (isset($_GET['hash'])) {
+if (isset($_GET['password'])) {
 		$db				= new PDO($DB_DNS, $DB_USER, $DB_PASSWORD);
 		$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		$db->query("USE matcha;");
